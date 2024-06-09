@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "In this task you will setup your first Express app and create one endpoint that returns a list of all products.",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.4.1"
+  }
 }

@@ -1,10 +1,14 @@
+const productsRouter = require("./apis/products/routes");
+const express = require("express");
+const connectDB = require("./database");
 const app = express();
-const products = require("./data");
 
 app.use(express.json());
 
-app.get("/api/products", (req, res) => {
-  return res.json(products);
-});
+app.use("/products", productsRouter);
 
-app.listen(8000, () => {});
+connectDB();
+
+app.listen(8000, () => {
+  console.log("I am running on port 8000");
+});
